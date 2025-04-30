@@ -5,6 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery - Jet Ski Rental Service</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery-container img, .gallery-container video {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover, .gallery-container video:hover {
+    transform: scale(1.1);
+}
+
+.instagram-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.instagram-link img {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.instagram-link .instagram-url {
+    font-size: 0.9rem;
+    color: #0077b6;
+    text-decoration: none;
+}
+
+.instagram-link .instagram-url:hover {
+    text-decoration: underline;
+}
+
+.image-gallery, .video-gallery {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.video-gallery video {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.video-gallery video:hover {
+    transform: scale(1.1);
+}
+    </style>
+    <!-- Include Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
 </head>
 <body>
     <header>
@@ -20,49 +89,72 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Follow Us on Instagram</h2>
-            <p>Check out our latest photos and videos on Instagram!</p>
-            
-            <!-- Embed Instagram Posts -->
-            <div class="instagram-posts">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DBT2wksNqaj/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/DBT2wksNqaj/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DBBwx83t9Q1/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/DBBwx83t9Q1/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CyiKQX9tFRO/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/CyiKQX9tFRO/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5yYHmStaQb/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/C5yYHmStaQb/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C4gMUw7NpeC/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/C4gMUw7NpeC/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3fAswVt7JL/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/C3fAswVt7JL/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CuxltIgtMHk/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/CuxltIgtMHk/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CuT7xXnNVyl/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/CuT7xXnNVyl/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CttfuWLrUoz/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/CttfuWLrUoz/" target="_blank">View this post on Instagram</a>
-                </blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CswN9ITtVb8/" data-instgrm-version="14">
-                    <a href="https://www.instagram.com/p/CswN9ITtVb8/" target="_blank">View this post on Instagram</a>
-                </blockquote>
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <div class="gallery-container">
+                <!-- Instagram Link with Thumbnail and URL -->
+                <div class="instagram-link">
+                    <a href="https://www.instagram.com/Jet_ski_puerto_banus" target="_blank">
+                        <img src="assets/images/instagram-logo.jpg" alt="Visit our Instagram">
+                    </a>
+                    <a href="https://www.instagram.com/Jet_ski_puerto_banus" target="_blank" class="instagram-url">
+                        www.instagram.com/Jet_ski_puerto_banus
+                    </a>
+                </div>
+
+                <!-- Add Images -->
+                <div class="image-gallery">
+                    <img src="assets/images/JETSKIPUERTOBANUS1.jpg" alt="Jet Ski Adventure 1">
+                    <img src="assets/images/JETSKIPUERTOBANUS2.jpg" alt="Jet Ski Adventure 2">
+                    <img src="assets/images/JETSKIPUERTOBANUS3.jpg" alt="Jet Ski Adventure 3">
+                    <img src="assets/images/JETSKIPUERTOBANUS4.jpg" alt="Jet Ski Adventure 4">
+                    <img src="assets/images/JETSKIPUERTOBANUS5.jpg" alt="Jet Ski Adventure 5">
+                    <img src="assets/images/JETSKIPUERTOBANUS6.jpg" alt="Jet Ski Adventure 6">
+                    <img src="assets/images/JETSKIPUERTOBANUS7.jpg" alt="Jet Ski Adventure 7">
+                    <img src="assets/images/JETSKIPUERTOBANUS8.jpg" alt="Jet Ski Adventure 8">
+                    <img src="assets/images/JETSKIPUERTOBANUS9.jpg" alt="Jet Ski Adventure 9">
+                    <img src="assets/images/JETSKIPUERTOBANUS10.jpg" alt="Jet Ski Adventure 10">
+                    <img src="assets/images/JETSKIPUERTOBANUS11.jpg" alt="Jet Ski Adventure 11">
+                    <img src="assets/images/JETSKIPUERTOBANUS12.jpg" alt="Jet Ski Adventure 12">
+                </div>
+
+                <!-- Add Videos with Lightbox -->
+                <div class="video-gallery">
+                    <video controls width="300">
+                        <source src="assets/videos/Come and enjoy the jet skis in Puerto Banus.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="300">
+                        <source src="assets/videos/Come to visit us in Puerto Banús.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="300">
+                        <source src="assets/videos/Jet ski marbella.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="300">
+                        <source src="assets/videos/Jet ski puerto banus (2).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls width="300">
+                        <source src="assets/videos/Jet ski puerto banus.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <script async src="//www.instagram.com/embed.js"></script>
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="year"></span> Jet Ski Rental Service. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Jet Ski Puerto Banus. All rights reserved.</p>
     </footer>
     <script src="assets/js/scripts.js"></script>
+    <!-- Include Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+    <script>
+        lightGallery(document.querySelector('.video-gallery'), {
+            selector: 'a',
+            download: false
+        });
+    </script>
 </body>
 </html>
